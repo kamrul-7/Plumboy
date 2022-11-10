@@ -1,0 +1,90 @@
+[
+    {
+        "service_id": 1,
+        "title": "Drain and Sewer Line Cleaning",
+        "price": 999.99,
+        "rating": 4.8,
+        "img": "https://www.eagledrain.com/wp-content/uploads/2020/07/AdobeStock_143544382-scaled.jpeg",
+        "description": "Drains and pipes can be blocked by all kinds of debris. A blockage may consist of hair, oil, or mineral deposits. When a clog is suspected, our technicians can perform a range of services to remedy the problem. We can use the latest snake equipment to clean sewer lines and avoid damaging gas and electrical lines in the process, while preventing damage to your home or institution. When factors out of your control have led to sewer pipe failure, we can employ trenchless repair and replacement techniques to restore your plumbing with minimal disruption."
+    },
+    {
+        "service_id": 2,
+        "title": "Water Line Repair & Installation",
+        "price": 899.99,
+        "rating": 4.8,
+        "img": "https://trusteyman.com/wp-content/uploads/2019/02/how-does-plumbing-work-e1548696261445.jpeg",
+        "description": "Your water line is a crucial component to your plumbing system. When the time comes for repairs, replacement, or new installations, reach out to the Provo water line repair and installation experts at ABC Plumbing Services. Each and every one of our technicians is background checked and highly trained and experienced. We use top-notch equipment and advanced techniques to complete every plumbing service efficiently and effectively."
+    },
+    {
+        "service_id": 3,
+        "title": "Gas Line Installation and Repair",
+        "price": 1249.99,
+        "rating": 4.8,
+        "img": "https://mrplumberindy.com/wp-content/uploads/2019/11/shutterstock_1419693749.jpg",
+        "description": "A sulfur or rotten egg smell is the most obvious sign of a natural gas leak. The gas company, as a kind of alarm, purposefully adds this scent as natural gas is normally odorless. If the leak is from an appliance, like a stove or barbeque, you may hear a hissing sound you can call us. Our skilled plumbers are trained in gas line repairs. They are also insured and licensed by the state to repair, service, and install natural gas lines. In addition to repairs, ABC Plumbing Services can also install new gas lines to appliances including stoves, HVAC systems, water heaters, fireplaces, and outdoor barbeque grills. Our work is backed by our satisfaction guarantee."
+    },
+    {
+        "service_id": 4,
+        "title": "Sink, Toilet, Tub & Shower Installation",
+        "price": 1699.99,
+        "rating": 4.9,
+        "img": "https://cdn.shopify.com/s/files/1/0172/1463/6096/articles/unnamed_6b769e24-8280-4dbe-9bd5-690b49deace1.jpg?v=1630916968",
+        "description": "Are you ready to upgrade your bathroom or kitchen? At American Plumbing Services, our sink, toilet, tub, and shower installation experts are ready to take out the old and install new, more efficient plumbing fixtures. We offer a full bathroom design, planning and installation service, so that we can help turn your dreams into reality."
+    },
+    {
+        "service_id": 5,
+        "title": "Water Heater Installation and Maintenance",
+        "price": 1999.9,
+        "rating": 4.8,
+        "img": "https://rogerthatkc.com/wp-content/uploads/2020/04/51380a_9701d323ce48424baa1d9a13c2b60a80mv2.jpg",
+        "description": "Not having warm water during winter,it is not only inconvenient but it can also be dangerous. If your water heater is broken down, or if you are ready to upgrade to a newer, more efficient model, we is here for you. Our plumbers are trained to install and service gas and electric hot water heaters in residences and businesses. "
+    },
+    {
+        "service_id": 6,
+        "title": "Water Softener Installation",
+        "price": 1990.99,
+        "rating": 4.9,
+        "img": "https://thearchitectsdiary.com/wp-content/uploads/2021/03/How-to-Install-a-Water-Softener-in-a-Pre-plumbed-House.jpg",
+        "description": "A water softener filters out mineral ions and exchanges them with sodium bicarbonate (not sodium chloride) ions to make the water more conducive to cleaning. While taking a bath or shower, you will experience a striking difference in the way your skin feels. It will be smoother and softer, and your soap will produce significantly more bubbles. You’ll love the spa-like effect of soft water. If you are ready to get rid of your hard water once and for all, call our ABC water softener installation professionals. We have more than 15 years of plumbing experience and guarantee your satisfaction with every service."
+    },
+    {
+        "service_id": 7,
+        "title": "Hydro Jetting",
+        "price": 990.99,
+        "rating": 4.8,
+        "img": "https://i.ytimg.com/vi/D2YNh8FelS0/maxresdefault.jpg",
+        "description": "A slow-moving drain is usually the first sign that you have a clog somewhere in your plumbing line. We know how frustrating a clogged drain can be, which is why the team at ABC Plumbing Services is dedicated to providing customers in Provo and surrounding communities with hydro jetting services you can trust at a price you can afford. Your line could be severely blocked, and all the water and waste in your system will be prevented from moving to their appropriate locations. You definitely don’t want that messy problem, so to prevent unsanitary sewer backups into your plumbing fixtures, you should call American Plumbing Services and ask for our Provo hydro jetting experts."
+    },
+    {
+        "service_id": 8,
+        "title": "Leak Detection",
+        "price": 549.99,
+        "rating": 4.8,
+        "img": "https://www.airbestpractices.com/sites/default/files/Figure%201_18_0.jpg",
+        "description": "Leaky pipes, faucets, or shower fixtures are commonplace annoyances most property owners have experienced and know too well. We have all been frustrated by the dripping sound and wished we had an instant solution. The problem is that the source of leaks and drips aren’t that simple to locate and fix. It takes a team of experienced and skilled plumbers many years to create a methodology for accurate and reliable leak detection. Your floors, walls, and ceiling can be damaged by leaks hidden behind these permanent structures. Our ABC leak detection specialists understand the importance of getting it right the first time. We arrive at your property prepared with the right equipment and experience to get the job done properly."
+    },
+    {
+        "service_id": 9,
+        "title": "Garbage Disposal Installation",
+        "price": 1399.99,
+        "rating": 4.8,
+        "img": "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/how-to-fix-a-garbage-disposal-step-8-A.jpg",
+        "description": "Garbage disposals are a kitchen necessity, used by many homeowners to reduce the amount of food waste they generate, eliminate odors from food waste, keep sink waste from entering pipes, and prevent clogged drains. If your garbage disposal is broken down, call ABC Plumbing Services. Our Provo garbage disposal installation techs can replace your garbage disposal at a price you can afford. We have the experience and skill to repair or replace any type of garbage disposal, so no matter how complex the job is, we can handle it."
+    },
+    {
+        "service_id": 10,
+        "title": "Emergency Service",
+        "price": 1399.99,
+        "rating": 4.8,
+        "img": "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/featured-image-plumbing-repair-cost.jpeg",
+        "description": "ABC Plumbing technicians are emergency plumbing specialists who offer complete plumbing services for both residential and commercial customers. We’re in the neighborhood, available 24/7 and we never charge for overtime. Our well-trained and experienced plumbing technicians are familiar with all types of household, office, industrial and commercial plumbing systems. When something suddenly goes wrong with your toilets, showers, sinks, grease traps, drains or sewer pipes — we know how important a quick response can be."
+    },
+    {
+        "service_id": 11,
+        "title": "SUMP Pump Installation and Repair",
+        "price": 1399.99,
+        "rating": 4.8,
+        "img": "https://www.benjaminfranklinplumbing.com/images/blog/10-Reasons-Why-a-Professional-Plumber-Is-Better-Than-DIY-_-Katy-TX.jpg",
+        "description": "ABC’s plumbing professionals are available 24/7 to perform routine sump pump maintenance, sump pump installation, sump pump replacement and emergency sump pump repair services. Many probably don't ever think of sump pump maintenance — until they have the misfortune of standing ankle-deep in their flooded basement after a heavy rainfall. Be proactive and ensure your sump pump is in good working order to prevent costly water damage and leave the hard work to us. "
+    }
+]
