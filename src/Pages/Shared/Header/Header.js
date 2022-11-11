@@ -18,9 +18,7 @@ const Header = () => {
         {
             user?.email ?
                 <>
-                    <li className='font-semibold'><Link to='/service'>Services</Link></li>
-                    <li className='font-semibold'><Link to='/orders'>Orders</Link></li>
-                    <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
+                    <li className='font-semibold'><Link to='/review'>Review</Link></li>
                     <li className='font-semibold'>
                         <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button>
                     </li>
@@ -28,7 +26,9 @@ const Header = () => {
                 :
                 <li className='font-semibold'><Link to='/login'>Login</Link></li>
         }
+        <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
     </>
+
     return (
         <div className="navbar h-20 mb-12 py-12 bg-base-100  shadow-lg">
             <div className="navbar-start">
