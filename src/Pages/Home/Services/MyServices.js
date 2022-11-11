@@ -9,7 +9,7 @@ const MyServices = () => {
     const [search, setSearch] = useState('');
     const searchRef = useRef();
     useEffect(() => {
-        fetch(`http://localhost:5000/services?search=${search}&order=${isAsc ? 'asc' : 'desc'}`)
+        fetch(`https://plumboy-server.vercel.app/services?search=${search}&order=${isAsc ? 'asc' : 'desc'}`)
             .then(res => res.json())
             .then(data => setServices(data))
     }, [isAsc, search]);

@@ -25,7 +25,7 @@ const AddService = () => {
             description
         }
         console.log(service)
-        fetch('http://localhost:5000/services', {
+        fetch('https://plumboy-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

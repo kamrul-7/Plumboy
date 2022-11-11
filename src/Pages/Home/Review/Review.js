@@ -7,7 +7,7 @@ const Review = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/comments?email=${user?.email}`, {
+        fetch(`https://plumboy-server.vercel.app/comments?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('genius-token')}`
             }
@@ -26,7 +26,7 @@ const Review = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to cancel this order');
         if (proceed) {
-            fetch(`http://localhost:5000/comments/${id}`, {
+            fetch(`https://plumboy-server.vercel.app/comments/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('genius-token')}`
@@ -44,7 +44,7 @@ const Review = () => {
     }
 
     const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/comments/${id}`, {
+        fetch(`https://plumboy-server.vercel.app/comments/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

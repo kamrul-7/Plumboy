@@ -11,7 +11,7 @@ const Services = () => {
     const [search, setSearch] = useState('');
     const searchRef = useRef();
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://plumboy-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
