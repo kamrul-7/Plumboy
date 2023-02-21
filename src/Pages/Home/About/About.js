@@ -5,7 +5,7 @@ import { Button } from 'antd';
 
 const About = () => {
     return (
-        <div className="hero lg:mb-20 mb-8 mt-4">
+        <div className="hero lg:mb-20 mb-8">
             <div className="hero-content flex-col lg:flex-row">
                 <div className='relative lg:w-1/2'>
                     <img src={img} alt="" className="w-4/5 h-full rounded-lg shadow-2xl" />
