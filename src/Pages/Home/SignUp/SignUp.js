@@ -32,26 +32,26 @@ const SignUp = () => {
     return (
         <div className="hero w-full my-20">
             <div>
-                <div className="card shadow-2xl bg-white py-20 w-96">
+                <div className="card shadow-2xl bg-white py-20 w-96 text-black">
                     <h1 className="lg:text-5xl text-3xl text-center font-bold">Sign Up</h1>
                     <form onSubmit={handleSignUp} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="Your Name" className="input input-bordered" />
+                            <input type="text" name='name' placeholder="Your Name" className="input input-bordered bg-white text-black" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" name='email' placeholder="email" className="input input-bordered" required />
+                            <input type="text" name='email' placeholder="email" className="input input-bordered bg-white text-black" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered bg-white text-black" required />
 
                         </div>
                         <div className="form-control mt-6">

@@ -6,14 +6,17 @@ import { Button, Card } from 'antd';
 import Meta from 'antd/es/card/Meta';
 import Loading from '../../../others/Loading';
 import { AuthContext } from '../../../contexts/Authprovider/AuthProvider';
+
 const ServiceCard = ({ service }) => {
-    const { img, price, title, description, rating } = service;
-    const { isLoading } = useContext(AuthContext)
+    const { isLoading } = useContext(AuthContext);
+    const { _id, img, price, title, description, rating } = service; /*All Card show */
     if (isLoading) {
         return <Loading></Loading>
     }
+
     return (
-        <div className="shadow-xl mb-10 mx-auto">
+        <div className="shadow-xl mx-auto">
+
             <Card
                 hoverable
                 style={{ width: 350 }}
@@ -33,7 +36,7 @@ const ServiceCard = ({ service }) => {
                         description
                 }
                 <div className="card-actions justify-end">
-                    <Link to={`/services/${service._id}`}>
+                    <Link to={`/serviceDetails/${_id}`}>
                         <Button className='mr-4 mb-4 px-8 text-lg pb-8' type="primary" danger>Details</Button>
                     </Link>
                 </div>

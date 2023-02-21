@@ -1,6 +1,7 @@
 import { Button, Card, Checkbox, Form, Input } from 'antd';
 import Meta from 'antd/es/card/Meta';
 import TextArea from 'antd/es/input/TextArea';
+import { Link } from 'react-router-dom';
 const onFinish = (values) => {
     console.log('Success:', values);
 };
@@ -100,9 +101,6 @@ const Products = () => {
                                     span: 16,
                                 }}
                             >
-                                <Button type="primary" className='text-white btn btn-accent' htmlType="submit">
-                                    Submit
-                                </Button>
 
                             </Form.Item>
 

@@ -33,12 +33,13 @@ const AuthProvider = ({ children }) => {
             console.log(currentUser);
             setUser(currentUser);
             setLoading(false)
-
         });
 
         return () => {
             return unsubscribe();
+
         }
+
     }, [])
 
     const authInfo = {
@@ -46,7 +47,7 @@ const AuthProvider = ({ children }) => {
         createUser,
         login,
         logOut,
-        loading,
+        loading
     }
 
     return (

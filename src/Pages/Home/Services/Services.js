@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-import { Button } from 'antd';
 import { Card } from 'antd';
 import Loading from '../../../others/Loading';
 import { AuthContext } from '../../../contexts/Authprovider/AuthProvider';
@@ -11,16 +10,12 @@ const { Meta } = Card;
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    const { isLoading } = useContext(AuthContext)
     useEffect(() => {
         fetch('https://plumboy-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
     let count = 0;
-    if (isLoading) {
-        return <Loading></Loading>
-    }
     return (
         <div>
             <div className='text-center mb-4'>
@@ -36,7 +31,11 @@ const Services = () => {
                                 <Card
                                     hoverable
                                     style={{ width: 350 }}
-                                    cover={<img alt="" src={service.img} />}
+                                    cover={<PhotoProvider>
+                                        <PhotoView src={service?.img}>
+                                            <img src={service?.img} alt="" />
+                                        </PhotoView>
+                                    </PhotoProvider>}
                                 >
                                     <Meta title={service?.title} />
                                     <h2 className='text-2xl text-yellow-400 font-semibold'>{service?.rating}</h2>
@@ -47,11 +46,6 @@ const Services = () => {
                                             :
                                             service?.description
                                     }
-                                    <div className="card-actions justify-end">
-                                        <Link to={`/services/${service._id}`}>
-                                            <Button className='mr-4 mb-4 px-8 text-lg pb-8' type="primary" danger>Details</Button>
-                                        </Link>
-                                    </div>
                                 </Card>
                             </div>)
                         }

@@ -52,20 +52,20 @@ const Login = () => {
     return (
         <div className="container w-full mb-24">
             <div className="hero-content">
-                <div className="card bg-white shadow-2xl mt-12 lg:w-96 py-20">
+                <div className="card bg-white shadow-2xl mt-12 lg:w-96 py-20 text-black">
                     <h1 className="lg:text-5xl text-2xl text-center font-bold">Login</h1>
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" name='email' placeholder="email" className="input input-bordered" />
+                            <input type="text" name='email' placeholder="email" className="input input-bordered bg-white text-black" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered" />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered bg-white text-black" />
                             <label className="label">
 
                             </label>

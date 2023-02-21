@@ -51,12 +51,10 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><MyServices></MyServices></PrivateRoute>
             },
             {
-                path: '/services/:id',
-                element: <ServiceCardDetails></ServiceCardDetails>,
-                loader: ({ params }) => fetch(`https://plumboy-server.vercel.app/services/${params.id}`)
+                path: '/serviceDetails/:id',
+                element: <PrivateRoute><ServiceCardDetails></ServiceCardDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             },
-
-
 
         ]
     }
