@@ -32,7 +32,7 @@ const BannerItem = () => {
                     <div className='lg:hidden '>
                         <Lottie style={{ height: 150, width: 100 }} animationData={groovyWalkAnimation} loop={true} />
                     </div>
-                    <h1 className='text-center mt-12 text-xl hover:text-green-600 lg:text-4xl  font-bold text-red-500'>Professional
+                    <h1 className='text-center mt-32 text-xl hover:text-green-600 lg:text-4xl  font-bold text-red-500'>Professional
                         Plumbing Service <br />
                         for Your Home</h1>
 
