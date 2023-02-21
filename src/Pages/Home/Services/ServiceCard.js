@@ -10,13 +10,12 @@ import { AuthContext } from '../../../contexts/Authprovider/AuthProvider';
 const ServiceCard = ({ service }) => {
     const { isLoading } = useContext(AuthContext);
     const { _id, img, price, title, description, rating } = service; /*All Card show */
+    console.log(isLoading);
     if (isLoading) {
         return <Loading></Loading>
     }
-
     return (
-        <div className="shadow-xl mx-auto">
-
+        <div className="shadow-xl mb-10 mx-auto">
             <Card
                 hoverable
                 style={{ width: 350 }}
