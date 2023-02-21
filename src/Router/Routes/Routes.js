@@ -4,14 +4,13 @@ import Error from "../../others/Error";
 import Blog from "../../Pages/Home/Blog/Blog";
 import Home from "../../Pages/Home/Home/Home";
 import Review from "../../Pages/Home/Review/Review";
-import AddComments from "../../Pages/Home/Services/AddService";
 import AddService from "../../Pages/Home/Services/AddService";
 import MyServices from "../../Pages/Home/Services/MyServices";
 import ServiceCardDetails from "../../Pages/Home/Services/ServiceCardDetails";
 import Services from "../../Pages/Home/Services/Services";
-
 import SignUp from "../../Pages/Home/SignUp/SignUp";
 import Login from "../../Pages/Login/Login";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 const router = createBrowserRouter([
     {
         path: '/',
@@ -36,7 +35,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'addservice',
-                element: <AddService></AddService>
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
 
             },
             {
@@ -49,7 +48,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/myservices',
-                element: <MyServices></MyServices>
+                element: <PrivateRoute><MyServices></MyServices></PrivateRoute>
             },
             {
                 path: '/services/:id',

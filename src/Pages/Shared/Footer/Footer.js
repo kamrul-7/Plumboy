@@ -2,10 +2,10 @@ import React from 'react';
 import Logo from '../../../assets/Logo/Logo.png'
 const Footer = () => {
     return (
-        <footer className="footer p-32 bg-blue-300 text-white">
+        <footer className="footer flex mt-12 p-4 lg:justify-between bg-black text-white">
             <div>
                 <img src={Logo} alt="" />
-                <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                <p>Plumbing Industries Ltd.<br />Providing reliable tech since 1992</p>
             </div>
             <div>
                 <span className="footer-title">Services</span>

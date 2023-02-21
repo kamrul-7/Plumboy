@@ -1,33 +1,31 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useContext } from 'react';
+import { useQuery } from 'react-query';
+import { AuthContext } from '../../../contexts/Authprovider/AuthProvider';
+import Loading from '../../../others/Loading';
 import MyServiceCard from './ServiceCard';
 
 
 
 const MyServices = () => {
     const [services, setServices] = useState([]);
-    const [isAsc, setIsAsc] = useState(true);
-    const [search, setSearch] = useState('');
-    const searchRef = useRef();
+    const { isLoading } = useContext(AuthContext)
     useEffect(() => {
-        fetch(`https://plumboy-server.vercel.app/services?search=${search}&order=${isAsc ? 'asc' : 'desc'}`)
+        fetch(`https://plumboy-server.vercel.app/services`)
             .then(res => res.json())
             .then(data => setServices(data))
-    }, [isAsc, search]);
 
-    const handleSearch = () => {
-        setSearch(searchRef.current.value);
+    }, []);
+
+    if (isLoading) {
+        return <Loading></Loading>
     }
     return (
         <div>
             <div className='text-center mb-4'>
-                <p className="text-2xl font-bold text-orange-600">Services</p>
-                <h2 className="text-5xl font-semibold">Our Service Area</h2>
-                <p>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                <input className='input input-sm' ref={searchRef} type="text" />
-                <button onClick={handleSearch}>Search</button>
-                <button className='btn btn-ghost' onClick={() => setIsAsc(!isAsc)}>{isAsc ? 'desc' : 'asc'}</button>
+                <h2 className="lg:text-4xl text-xl font-semibold mt-8 mb-12 text-red-500 hover:text-green-500">Our Service Area</h2>
             </div>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     services.map(service => <MyServiceCard
                         key={service._id}

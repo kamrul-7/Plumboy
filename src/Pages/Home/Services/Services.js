@@ -1,71 +1,64 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-import ServiceCard from './ServiceCard';
+import { Button } from 'antd';
+import { Card } from 'antd';
+import Loading from '../../../others/Loading';
+import { AuthContext } from '../../../contexts/Authprovider/AuthProvider';
 
+const { Meta } = Card;
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    const [isAsc, setIsAsc] = useState(true);
-    const [search, setSearch] = useState('');
-    const searchRef = useRef();
+    const { isLoading } = useContext(AuthContext)
     useEffect(() => {
         fetch('https://plumboy-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
-
-    const handleSearch = () => {
-        setSearch(searchRef.current.value);
-    }
-
     let count = 0;
+    if (isLoading) {
+        return <Loading></Loading>
+    }
     return (
         <div>
             <div className='text-center mb-4'>
-                <p className="text-2xl font-bold text-orange-600">Services</p>
-                <h2 className="text-5xl font-semibold">Our Service Area</h2>
-                <p>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                <input className='input input-sm' ref={searchRef} type="text" />
-                <button onClick={handleSearch}>Search</button>
-                <button className='btn btn-ghost' onClick={() => setIsAsc(!isAsc)}>{isAsc ? 'desc' : 'asc'}</button>
+                <h2 className="lg:text-4xl text-2xl font-semibold text-red-500 hover:text-green-500 my-8">Our Service Area</h2>
+
             </div>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     services?.map((service) => {
                         count = count + 1;
                         if (count <= 3) {
-                            return (<div>
-                                <div className="card card-compact w-96 bg-base-100 shadow-xl mb-10">
-                                    <PhotoProvider>
-                                        <PhotoView src={service.img}>
-                                            <img src={service.img} alt="" />
-                                        </PhotoView>
-                                    </PhotoProvider>
-                                    <div className="card-body">
-                                        <h2 className="card-title">{service?.title}</h2>
-                                        <h2 className='text-2xl text-yellow-400 font-semibold'>{service?.rating}</h2>
-                                        <p className='text-2xl text-orange-600 font-semibold'>Price: ${service?.price}</p>
-                                        {
-                                            service?.description.length > 100 ?
-                                                <>{service?.description.slice(0, 100) + '...'}  </>
-                                                :
-                                                service?.description
-                                        }
-                                        <div className="card-actions justify-end">
-                                            <Link to={`/servicedetails/${service._id}`}>
-                                                <button className="btn btn-primary">details</button>
-                                            </Link>
-                                        </div>
+                            return (<div className='flex mx-auto my-4'>
+                                <Card
+                                    hoverable
+                                    style={{ width: 350 }}
+                                    cover={<img alt="" src={service.img} />}
+                                >
+                                    <Meta title={service?.title} />
+                                    <h2 className='text-2xl text-yellow-400 font-semibold'>{service?.rating}</h2>
+                                    <p className='text-2xl text-orange-600 font-semibold'>Price: ${service?.price}</p>
+                                    {
+                                        service?.description.length > 100 ?
+                                            <>{service?.description.slice(0, 100) + '...'}  </>
+                                            :
+                                            service?.description
+                                    }
+                                    <div className="card-actions justify-end">
+                                        <Link to={`/services/${service._id}`}>
+                                            <Button className='mr-4 mb-4 px-8 text-lg pb-8' type="primary" danger>Details</Button>
+                                        </Link>
                                     </div>
-                                </div>
+                                </Card>
                             </div>)
                         }
                     })
                 }
             </div>
-            <Link to='/myservices'><button className='btn btn-warning mb-10'>Show More</button></Link>
+            <Link to='/myservices'><button className='btn btn-accent mt-8 px-12 flex mx-auto'>Show  More</button></Link>
         </div>
     );
 };

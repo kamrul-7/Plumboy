@@ -1,50 +1,123 @@
-import React from 'react';
-
+import { Button, Card, Checkbox, Form, Input } from 'antd';
+import Meta from 'antd/es/card/Meta';
+import TextArea from 'antd/es/input/TextArea';
+const onFinish = (values) => {
+    console.log('Success:', values);
+};
+const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+};
 const Products = () => {
     return (
         <div>
-            <h2 className='text-6xl font-bold text-center my-8'>Products</h2>
-            <div className='grid grid-cols-3 mb-8 gap-8'>
-                <div className="card card-compact w-96 bg-base-100 shadow-xl mb-10 ">
-                    <img src='https://5.imimg.com/data5/SELLER/Default/2021/6/FX/XQ/ZA/87696584/30089-banner-500x500.png' alt="" />
-                    <div className="card-body">
-                        <h2 className="card-title"></h2>
-                        <h2 className='text-2xl text-yellow-400 font-semibold'></h2>
-                        <p className='text-2xl text-orange-600 font-semibold'></p>
-                    </div>
-                </div>
-                <div classsName="card card-compact w-96 bg-base-100 shadow-2xl mb-10">
-                    <img src='https://www.eagertonplumbing.com/wp-content/uploads/2021/02/new-plumbing-fixtures.jpg' alt="" />
-                    <div className="card-body">
-                        <h2 className="card-title"></h2>
-                        <h2 className='text-2xl text-yellow-400 font-semibold'></h2>
-                        <p className='text-2xl text-orange-600 font-semibold'></p>
-                    </div>
-                </div>
-                <div className="card card-compact w-96 bg-base-100 shadow-xl mb-10">
-                    <img src='https://img1.exportersindia.com/product_images/bc-full/dir_189/5666013/plumbing-products-1528706638-3966265.jpeg' alt="" />
-                    <div className="card-body">
-                        <h2 className="card-title"></h2>
-                        <h2 className='text-2xl text-yellow-400 font-semibold'></h2>
-                        <p className='text-2xl text-orange-600 font-semibold'></p>
-                    </div>
-                </div>
-                <div className="card card-compact w-96 bg-base-100 shadow-xl mb-10">
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXimFuuaSe_fu0sb3ENP4Kufzs3FZHUo-46EIWuQFU49sNYDNEZ5PODFnOAF-WG0WX0Dg&usqp=CAU' alt="" />
-                    <div className="card-body">
-                        <h2 className="card-title"></h2>
-                        <h2 className='text-2xl text-yellow-400 font-semibold'></h2>
-                        <p className='text-2xl text-orange-600 font-semibold'></p>
-                    </div>
+            <h2 className='lg:text-4xl text-2xl font-bold text-red-500 hover:text-green-500 text-center mt-8'>Our Products</h2>
+
+
+            <div className=''>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-5 lg:ml-12'>
+                    <Card className='mt-8 '
+                        hoverable
+                        style={{ width: 340 }}
+                        cover={<img alt="example" src="https://images.pexels.com/photos/615326/water-tap-black-and-white-macro-615326.jpeg?auto=compress&cs=tinysrgb&w=600" />}
+                    >
+                        <Meta title="Europe Street beat" description="www.Plumboy.com" />
+                    </Card>
+                    <Card className='mt-8 '
+                        hoverable
+                        style={{ width: 340 }}
+                        cover={<img alt="example" src="https://images.pexels.com/photos/4022782/pexels-photo-4022782.jpeg?auto=compress&cs=tinysrgb&w=600" />}
+                    >
+                        <Meta title="Europe Street beat" description="www.Plumboy.com" />
+                    </Card>
+                    <Card className='mt-8 '
+                        hoverable
+                        style={{ width: 340 }}
+                        cover={<img alt="example" src="https://images.pexels.com/photos/6899546/pexels-photo-6899546.jpeg?auto=compress&cs=tinysrgb&w=600" />}
+                    >
+                        <Meta title="Europe Street beat" description="www.Plumboy.com" />
+                    </Card>
                 </div>
             </div>
-            <div className=''>
-                <h1 className='text-6xl font-bold text-center my-8'>Contract us</h1>
-                <div className='grid grid-cols-2 my-8 text-2xl font-semibold '>
-                    <p>Contact Email linda@contractus.co.za</p>
-                    <p>Phone Number +270871600802</p>
-                    <img className='mt-8' src="https://plumbingman.com.au/wp-content/uploads/2017/02/Plumbing-Man-Sydney-Emergency-Mobile-Plumber.png" alt="" />
-                </div>
+            <div className='mt-8 pt-4 bg-white mx-6 lg:mx-12 rounded-md'>
+                <h1 className='text-center text-xl font-bold mb-8 lg:text-4xl text-red-500 hover:text-green-500 bg-white'>Contact Us</h1>
+                <>
+                    <div className='lg:mr-32 mx-8'>
+                        <Form
+                            name="basic"
+                            labelCol={{
+                                span: 8,
+                            }}
+                            wrapperCol={{
+                                span: 10,
+                            }}
+
+                            initialValues={{
+                                remember: true,
+                            }}
+                            onFinish={onFinish}
+                            onFinishFailed={onFinishFailed}
+                            autoComplete="on"
+                        >
+                            <Form.Item
+                                label="Name"
+                                name="Name"
+                                placeholder='Enter your name'
+                                rules={[
+                                    {
+                                        required: true,
+                                        message: 'Please input your Name!',
+
+                                    },
+                                ]}
+                            >
+                                <Input />
+                            </Form.Item>
+                            <Form.Item
+                                label="Email"
+                                name="Email"
+                                rules={[
+                                    {
+                                        required: true,
+                                        message: 'Please input yourEmail!',
+                                    },
+                                ]}
+                            >
+                                <Input />
+                            </Form.Item>
+
+
+
+
+                            <Form.Item label="Your Comment">
+                                <TextArea rows={4} />
+                            </Form.Item>
+
+                            <Form.Item
+                                name="remember"
+                                valuePropName="checked"
+                                wrapperCol={{
+                                    offset: 8,
+                                    span: 16,
+                                }}
+                            >
+                                <Button type="primary" className='text-white btn btn-accent' htmlType="submit">
+                                    Submit
+                                </Button>
+
+                            </Form.Item>
+
+                            <Form.Item
+
+                            >
+
+                            </Form.Item>
+
+                        </Form>
+
+                    </div>
+
+                </>
+
             </div>
         </div>
     );

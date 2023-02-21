@@ -14,9 +14,10 @@ const Header = () => {
     }
 
     const menuItems = <>
-        <li className='font-semibold'><Link to='/'>Home</Link></li>
-        <li className='font-semibold'><Link to='/myservices'>Services</Link></li>
-        <li className='font-semibold'><Link to='/addservice'>Add Services</Link></li>
+        <li className='font-semibold mr-4'><Link to='/'>Home</Link></li>
+        <li className='font-semibold mr-4'><Link to='/myservices'>Services</Link></li>
+        <li className='font-semibold mr-4'><Link to='/addservice'>Add Services</Link></li>
+        <li className='font-semibold mr-4'><Link to='/blog'>Blog</Link></li>
         {
             user?.email ?
                 <>
@@ -28,11 +29,11 @@ const Header = () => {
                 :
                 <li className='font-semibold'><Link to='/login'>Login</Link></li>
         }
-        <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
+
     </>
 
     return (
-        <div className="navbar h-20 mb-12 py-12 bg-base-100  shadow-lg">
+        <div className="navbar h-20 bg-base-100  shadow-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,9 +53,7 @@ const Header = () => {
                     {menuItems}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <button className="btn btn-outline btn-warning">Appointment</button>
-            </div>
+
         </div>
     );
 };
