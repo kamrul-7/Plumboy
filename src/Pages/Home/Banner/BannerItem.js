@@ -6,7 +6,6 @@ import slider3 from '../../../assets/Banner/img3.jpg'
 import slider4 from '../../../assets/Banner/img4.jpg'
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "../../../assets/Logo/117401-pipewrench.json";
-import './BannerItem.css'
 const BannerItem = () => {
     return (
         <div className='carousel-img'>
