@@ -39,14 +39,14 @@ const Products = () => {
                     </Card>
                 </div>
             </div>
-            <div className='mt-8 pt-4 bg-white w-72 mx-auto lg:mx-12 rounded-md'>
+            <div className='mt-8 pt-4 bg-white w-72 lg:w-full lg:mx-auto mx-auto rounded-md'>
                 <h1 className='text-center text-xl font-bold mb-8 lg:text-4xl text-red-500 hover:text-green-500 bg-white'>Contact Us</h1>
                 <>
-                    <div className='lg:mr-32 mx-8'>
+                    <div className='lg:mr-32 mx-auto'>
                         <Form
                             name="basic"
                             labelCol={{
-                                span: 12,
+                                span: 8,
                             }}
                             wrapperCol={{
                                 span: 12,
