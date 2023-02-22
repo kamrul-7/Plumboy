@@ -40,9 +40,9 @@ const Products = () => {
                 </div>
             </div>
             <div className='mt-8 pt-4 bg-white w-72 lg:w-full lg:mx-auto mx-auto rounded-md'>
-                <h1 className='text-center text-xl font-bold mb-8 lg:text-4xl text-red-500 hover:text-green-500 bg-white'>Contact Us</h1>
+                <h1 className='text-center text-xl font-bold lg:mb-8 mb-4 lg:text-4xl text-red-500 hover:text-green-500 bg-white'>Contact Us</h1>
                 <>
-                    <div className='lg:mr-32 mx-auto'>
+                    <div className='lg:mr-32 mx-auto p-8'>
                         <Form
                             name="basic"
                             labelCol={{
@@ -91,23 +91,6 @@ const Products = () => {
 
                             <Form.Item label="Your Comment">
                                 <TextArea rows={4} />
-                            </Form.Item>
-
-                            <Form.Item
-                                name="remember"
-                                valuePropName="checked"
-                                wrapperCol={{
-                                    offset: 8,
-                                    span: 12,
-                                }}
-                            >
-
-                            </Form.Item>
-
-                            <Form.Item
-
-                            >
-
                             </Form.Item>
 
                         </Form>

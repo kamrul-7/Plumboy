@@ -17,7 +17,7 @@ const About = () => {
                         We are qualified
                         & of experience <br />
                         in this field</h1>
-                    <p className="py-6 mb-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                    <p className="py-6 mb-6 text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
                         the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
                     <Button className='btn btn-accent mx-auto flex lg:px-8 lg:text-xl'>
                         Get more info
